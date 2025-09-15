@@ -63,44 +63,44 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    document.getElementById("dialpad").addEventListener("click", (e) => {
+//     document.getElementById("dialpad").addEventListener("click", (e) => {
 
-        if (e.target.name === "calc") {
+//         if (e.target.name === "calc") {
       
-            var value = e.target.value;
-            if (value === "del") {
-                displayVal && (displayVal.innerText = (displayVal.innerText || "").slice(0, -2));
+//             var value = e.target.value;
+//             if (value === "del") {
+//                 displayVal && (displayVal.innerText = (displayVal.innerText || "").slice(0, -2));
 
-            }
-            else if (value === "Reset") {
-                displayVal.innerText = null;
+//             }
+//             else if (value === "Reset") {
+//                 displayVal.innerText = null;
 
-            } else if (value === "=") {
-displayVal.innerText=a;
-            }
-            else if (value === "+") {
+//             } else if (value === "=") {
+// displayVal.innerText=a;
+//             }
+//             else if (value === "+") {
 
-                a += parseFloat(displayVal.innerText);
-                
-                displayVal.innerText = a;
+//                 a += parseFloat(displayVal.innerText);
 
-            }
-            else if (value === "-") {
-                a -= parseFloat(displayVal.innerText);
-            }
-            else if (value === "X") {
-                a *= parseFloat(displayVal.innerText);
+//                 displayVal.innerText = a;
 
-            } else if (value === "/") {
-                a /= parseFloat(displayVal.innerText);
-            }
-            else {
-                displayVal.innerText = displayVal.innerText !== null ? displayVal.innerText + value : value;
+//             }
+//             else if (value === "-") {
+//                 a -= parseFloat(displayVal.innerText);
+//             }
+//             else if (value === "X") {
+//                 a *= parseFloat(displayVal.innerText);
 
-            }
+//             } else if (value === "/") {
+//                 a /= parseFloat(displayVal.innerText);
+//             }
+//             else {
+//                 displayVal.innerText = displayVal.innerText !== null ? displayVal.innerText + value : value;
 
-        }
-    })
+//             }
+
+//         }
+//     })
 
 });
 

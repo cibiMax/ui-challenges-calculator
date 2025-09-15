@@ -191,7 +191,7 @@ h5 {
 }
 
 /* style the first radio's dot when checked */
-.radio:nth-child(1) input[type="radio"]:checked+.dot {
+ input[value="red"]:checked+.dot {
     background-color: red !important;
 
 }
