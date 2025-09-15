@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: black;
+    font-family:"League Spartan"
+
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas: ". . ." ". content ." ". . .";
+    height: 100vh;
+    width: 100vw;
+    background-color:  black;
+    object-fit: contain;
+
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    row-gap: 30px;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: 25px 100px 2fr;
+    grid-template-areas: "header" "result" "dialpad";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: white;
+    font-weight: 900;
+}
+
+.theme-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+
+.result {
+    grid-area: result;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: hsl(268, 71%, 12%);
+    height: 100px;
+    border-radius: 10px;
+}
+
+.dialpad {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 20px;
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 10px;
+    gap: 20px;
+    max-width: calc(100vw - 40px);
+
+    aspect-ratio: 1.15;
+}
+
+.numeric-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(52, 100%, 62%);
+    font-weight: 900;
+    font-size: large;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px hsl(290, 70%, 36%);
+    background-color: hsl(281, 89%, 26%);
+
+    border: none;
+    cursor: pointer;
+
+}
+
+.numeric-btn:active {
+    box-shadow: none;
+    background-color: white;
+}
+
+.equal-btn {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 4px 0px hsl(177, 92%, 70%);
+    color: black;
+}
+
+.equal-btn:active {
+    box-shadow: none;
+    background-color: white;
+    color: black;
+}
+
+.reset-btn {
+    box-shadow: 0px 4px 0px hsl(285, 91%, 52%);
+    background-color: hsl(281, 89%, 26%);
+    color: white;
+}
+
+.reset-btn:active {
+    box-shadow: none;
+       background-color: hsl(285, 91%, 52%);
+    color: white;
+   
+
+}
+
+.col-span-2 {
+    grid-column: span 2;
+
+}
+
+.theme-toggle-button {
+    grid-area: theme-toggle-button;
+}
+
+.theme-toggle-layout {
+    display: grid;
+    grid-template-rows: 30px 30px;
+
+    grid-template-areas: ". theme-name" "theme-title theme-toggle-button";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 0px;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.theme-name {
+    grid-area: theme-name;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+
+}
+
+.theme-title {
+    grid-area: theme-title;
+}
+
+.radio-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(268, 71%, 12%);
+    padding: 5px;
+    border-radius: 20px;
+
+
+}
+
+.radio>input[type="radio"] {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+.radio input[type="radio"]+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+
+      
+}
+
+/* style the first radio's dot when checked */
+input[value="lightblue"]:checked+.dot {
+    background-color: lightblue !important;
+
+}
+
+@media (max-width:1023px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "content";
+
+
+
+
+
+    }
+
+
+
+    .numeric-btn {
+        font-size: medium;
+        border-radius: 10px;
+
+    }
+
+
+
+
+
+}
